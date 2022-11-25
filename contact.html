@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("body.jpg") no-repeat;
+            background-size: cover;
+        }
+        .container{
+            width: 80%;
+            padding: 20px;
+        }
+        .container h2{
+            width: 100%;
+            color: brown;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .row{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(autofit,minmax(300px,1fr));
+        }
+        .col{
+            position: relative;
+            width: 100%;
+            padding: 0 10px;
+            margin: 30px 0 10px;
+            transition: 0.5s;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 40px;
+            color: brown;
+        }
+        .input-box input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            padding: 0 10px;
+            z-index: 1;
+            color: #000;
+
+        }
+        .text{
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 40px;
+            font-size: 15px;
+            padding: 0 10px;
+            display: block;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .input-box-textarea{
+            color: brown;
+        }
+    .input-box input:valid + .text{
+            top: -35px;
+            left: -10px;
+        }
+        .line{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background:brown;
+            transition: 0.5s;
+            border-radius: 2px;
+            pointer-events: none;
+        }
+        .input-box-textarea{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 10px 0;
+           
+        }
+        .input-box-textarea textarea{
+            height: 100%;
+            resize: none;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Contact Us</h2>
+        <div class="row">
+            <div class="col">
+                <div class="input-box">
+                    <input type="text" name="">
+                    <span class="text"> Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-box">
+                    <input type="text" name="">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-box">
+                    <input type="text" name="">
+                    <span class="text">Phone Number</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-box-textarea">
+                    <textarea name=""></textarea>
+                    <span class="text">Message Here</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="send">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
